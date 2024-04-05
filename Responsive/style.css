@@ -1,0 +1,55 @@
+.box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(4, 100px);
+}
+.box {
+  background-color: dodgerblue;
+  border-radius: 5px;
+  place-content: center;
+  text-align: center;
+}
+.box-a {
+  grid-column: span 2;
+}
+.box-c {
+  grid-row: span 2;
+}
+@media (orientation:  portrait),(max-width: 150px) {
+  .box-a {
+    background-color: red;
+  }
+}
+
+@media (orientation: landscape), (max-width: 140px) {
+  .box-b {
+    background-color: green;
+  }
+}
+@media (orientation: landscape), (max-width: 140px) {
+  .box-d {
+    background-color: rgb(214, 6, 207);
+  }
+}
+@media (orientation: portrait),(max-width: 150px) {
+  .box-c {
+    background-color: #b8c806;
+  }
+}
+@media all and (max-width: 700px) {
+  body {
+    background-color: rgb(4, 4, 241);
+  }
+}
+@media (orientation: landscape),(max-width: 90px) {
+  .box-e {
+    background-color: rgb(26, 229, 233);
+  }
+}
